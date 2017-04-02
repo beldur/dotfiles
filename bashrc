@@ -52,7 +52,8 @@ export LSCOLORS=cxBxhxDxfxhxhxhxhxcxcx
 
 # enable GIT prompt color
 export GIT_PS1_SHOWCOLORHINTS=true
-
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
 
 ###############
 # Bash settings
@@ -67,7 +68,7 @@ export GIT_PS1_SHOWCOLORHINTS=true
 # 1. Git branch is being showed
 # 2. Title of terminal is changed for each new shell
 # 3. History is appended each time
-export PROMPT_COMMAND='__git_ps1 "\[$(tput setaf 6)\]\w\[$(tput sgr0)\]\[$(tput sgr0)\]" " "; echo -ne "\033]0;$PWD\007"'
+export PROMPT_COMMAND='__git_ps1 "\[$(tput setaf 6)\]\w\[$(tput sgr0)\]\[$(tput sgr0)\]" " "; echo -ne "\033]0;{$PWD##*/}\007"'
 
 
 # -- History
@@ -77,7 +78,7 @@ export PROMPT_COMMAND='__git_ps1 "\[$(tput setaf 6)\]\w\[$(tput sgr0)\]\[$(tput 
 export HISTCONTROL=ignoreboth:erasedups  
 export HISTFILE=~/.bash_history          # be explicit about file path
 export HISTSIZE=100000                   # in memory history size
-export HISTFILESIZE=100000               # on disk history size
+export HISTFILESIZE=1000000              # on disk history size
 export HISTTIMEFORMAT='%F %T '
 shopt -s histappend # append to history, don't overwrite it
 shopt -s cmdhist    # save multi line commands as one command

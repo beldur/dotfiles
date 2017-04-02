@@ -115,3 +115,5 @@
 
 [github]
     user = beldur
+[commit]
+	gpgsign = true
