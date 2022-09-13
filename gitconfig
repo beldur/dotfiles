@@ -1,10 +1,25 @@
 [user]
-    name = Alex\n
-    email = alexander@alexander-luecking.de\n
+    name = Alex
+    email = alexander@alexander-luecking.de
     signingkey = 56096461
 
 [core]
     editor = vim
+
+[pull]
+    rebase = true
+
+[fetch]
+    prune = true
+
+[push]
+    default = simple
+
+[init]
+    defaultBranch = main
+
+[gpg]
+    program = gpg
 
 [color]
     ui = auto
@@ -24,9 +39,6 @@
     added = yellow
     changed = green
     untracked = cyan
-
-[push]
-    default = simple
 
 [alias]
     st = status -s
@@ -115,5 +127,6 @@
 
 [github]
     user = beldur
+
 [commit]
-	gpgsign = true
+    gpgsign = true
